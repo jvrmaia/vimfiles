@@ -29,6 +29,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-lua-ftplugin'
 
+" Terraform
+Plug 'hashivim/vim-terraform'
+
 " Initialize plugin system
 call plug#end()
 
@@ -44,3 +47,8 @@ let g:coc_disable_startup_warning = 1
 " Ctrl P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Terraform
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+autocmd BufRead,BufNewFile *.hcl set filetype=terraform
